@@ -3,6 +3,7 @@ import tkinter as tk
 #how to get a WPM
 #user typing two words than it gets a wpm
 # wpm is word per minute(60seconds)
+#check input word and check time(seconds)
 
 
 #make Gui
@@ -14,3 +15,6 @@ if __name__ == "main" :
     #set title of program and size
     app.title("check speed of typing")
     app.geometry("296*200")
+
+    entry = tk.Entry(app, width=20)
+    entry.pack()
