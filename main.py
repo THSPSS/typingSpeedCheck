@@ -7,20 +7,23 @@ import tkinter as tk
 
 #start timer
 
+#if given word and written word has not same
+#then change the color of given word with red
+
 
 #make Gui
-if __name__ == "main" :
+if __name__ == "__main__":
 
     app = tk.Tk()
-    scrollbar = tk.Scrollbar(app, orient=tk.VERTICAL)
-
     #set title of program and size
     app.title("check speed of typing")
-    app.geometry("296*200")
+    app.geometry("296x200")
 
     #adding timer
 
 
-
+    #user input entry
     entry = tk.Entry(app, width=20)
-    entry.pack()
+    entry.grid(row=0 , column=0)
+
+    app.mainloop()
