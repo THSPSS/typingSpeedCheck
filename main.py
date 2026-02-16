@@ -21,9 +21,15 @@ if __name__ == "__main__":
 
     #adding timer
 
+    #text widget
+    testText = tk.Text(app, height=5, width=30)
+    testText.grid(row=0 , columnspan=7)
+
+    testText.insert(tk.INSERT , "apple applause more column tree")
+
 
     #user input entry
     entry = tk.Entry(app, width=20)
-    entry.grid(row=0 , column=0)
+    entry.grid(row=1 , columnspan=7)
 
     app.mainloop()
