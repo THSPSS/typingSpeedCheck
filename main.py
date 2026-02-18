@@ -1,3 +1,4 @@
+import time
 import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
@@ -8,6 +9,20 @@ from tkinter import messagebox
 #check input word and check time(seconds)
 
 #start timer
+def seconds_timer():
+    global second
+    temp = int(second.get())
+    while temp > -1 :
+        second.set("{0:2d}".format(temp))
+        app.update()
+        time.sleep(1)
+
+
+
+        if temp == 0:
+            messagebox.showinfo("Minute End" , "Time's up")
+
+        temp -= 1
 
 #if given word and written word has not same
 #then change the color of given word with red
@@ -36,7 +51,9 @@ if __name__ == "__main__":
 
     testText.insert(tk.INSERT , "apple applause more column tree")
 
-
+    btn = Button(app, text='Set Time Countdown', bd='5',
+                 command=seconds_timer)
+    btn.grid(row=0 , column=1)
     #user input entry
     entry = tk.Entry(app, width=20)
     entry.grid(row=2 , columnspan=7)
