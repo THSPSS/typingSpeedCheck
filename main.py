@@ -11,18 +11,21 @@ from tkinter import messagebox
 #start timer
 def seconds_timer():
     global second
+    #set flag
+    entryLen = True if len(entry.get()) else False
     temp = int(second.get())
-    while temp > -1 :
-        second.set("{0:2d}".format(temp))
-        app.update()
-        time.sleep(1)
+    if entryLen:
+        while temp > -1 :
+            second.set("{0:2d}".format(temp))
+            app.update()
+            time.sleep(1)
 
 
 
-        if temp == 0:
-            messagebox.showinfo("Minute End" , "Time's up")
+            if temp == 0:
+                messagebox.showinfo("Minute End" , "Time's up")
 
-        temp -= 1
+            temp -= 1
 
 #if given word and written word has not same
 #then change the color of given word with red
