@@ -9,7 +9,10 @@ from tkinter import messagebox
 #check input word and check time(seconds)
 
 #start timer
-def seconds_timer():
+def onEntryChange(*args):
+    current_text = entryVar.get()
+
+    print("current text is : ",current_text)
     global second
     #set flag
     entryLen = True if len(entry.get()) else False
@@ -39,6 +42,11 @@ if __name__ == "__main__":
     app.title("check speed of typing")
     app.geometry("296x200")
 
+    #entry string check
+    entryVar = tk.StringVar()
+
+    entryVar.trace_add("write" , onEntryChange)
+
     #adding timer
     second = StringVar()
 
@@ -54,11 +62,11 @@ if __name__ == "__main__":
 
     testText.insert(tk.INSERT , "apple applause more column tree")
 
-    btn = Button(app, text='Set Time Countdown', bd='5',
-                 command=seconds_timer)
-    btn.grid(row=0 , column=1)
+    # btn = Button(app, text='Set Time Countdown', bd='5',
+    #              command=seconds_timer)
+    # btn.grid(row=0 , column=1)
     #user input entry
-    entry = tk.Entry(app, width=20)
+    entry = tk.Entry(app, width=20 , textvariable=entryVar)
     entry.grid(row=2 , columnspan=7)
 
     app.mainloop()
