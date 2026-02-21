@@ -56,6 +56,10 @@ if __name__ == "__main__":
     secondEntry = Entry(app , width=3 , font=("Arial", 18,""),textvariable=second)
     secondEntry.grid(row=0 , column=0)
 
+    # wpmEntry
+    wpmEntry = Entry(app , width=3 , font=("Arial", 18 , ""))
+    wpmEntry.grid(row=0 , column=1)
+
     #text widget
     testText = tk.Text(app, height=5, width=30)
     testText.grid(row=1 , columnspan=7)
