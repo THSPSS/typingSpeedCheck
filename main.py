@@ -47,11 +47,13 @@ if __name__ == "__main__":
 
     entryVar.trace_add("write" , onEntryChange)
 
-    #adding timer
+    #set variable
     second = StringVar()
+    wpm = StringVar()
 
 
     second.set("60")
+    wpm.set("0")
 
     secondEntry = Entry(app , width=3 , font=("Arial", 18,""),textvariable=second)
     secondEntry.grid(row=0 , column=0)
