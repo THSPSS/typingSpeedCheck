@@ -7,12 +7,13 @@ from tkinter import messagebox
 #user typing two words than it gets a wpm
 # wpm is word per minute(60seconds)
 #check input word and check time(seconds)
+testString = "apple applause more column tree"
+
 
 #start timer
 def onEntryChange(*args):
     current_text = entryVar.get()
 
-    print("current text is : ",current_text)
     global second
     #set flag
     entryLen = True if len(entry.get()) else False
@@ -30,8 +31,15 @@ def onEntryChange(*args):
 
             temp -= 1
 
+def checkInputAndString():
+    #when user start to put string then check the word by word with test string
+    # if entryVar.get() ==
 #if given word and written word has not same
 #then change the color of given word with red
+
+def wpmCalculated():
+    # word per minute calculated
+    # result = (word/60)
 
 
 #make Gui
@@ -51,7 +59,6 @@ if __name__ == "__main__":
     second = StringVar()
     wpm = StringVar()
 
-
     second.set("60")
     wpm.set("0")
 
@@ -66,7 +73,7 @@ if __name__ == "__main__":
     testText = tk.Text(app, height=5, width=30)
     testText.grid(row=1 , columnspan=7)
 
-    testText.insert(tk.INSERT , "apple applause more column tree")
+    testText.insert(tk.INSERT , testString)
 
     # btn = Button(app, text='Set Time Countdown', bd='5',
     #              command=seconds_timer)
