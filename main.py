@@ -79,7 +79,8 @@ if __name__ == "__main__":
     #              command=seconds_timer)
     # btn.grid(row=0 , column=1)
     #user input entry
-    entry = tk.Entry(app, width=20 , textvariable=entryVar)
+    #add validate and check everykeystrok and compare to test string?
+    entry = tk.Entry(app, width=20 ,validate="key", textvariable=entryVar)
     entry.grid(row=2 , columnspan=7)
 
     app.mainloop()
