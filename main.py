@@ -7,7 +7,7 @@ from tkinter import messagebox
 #user typing two words than it gets a wpm
 # wpm is word per minute(60seconds)
 #check input word and check time(seconds)
-testString = "apple applause more column tree"
+testString = ["apple", "applause","more" ,"column" ,"tree"]
 
 
 #start timer
@@ -33,7 +33,12 @@ def onEntryChange(*args):
 
 def checkInputAndString():
     #when user start to put string then check the word by word with test string
-    # if entryVar.get() ==
+    user_input_list = []
+    for string in testString :
+        if entryVar.get() != string:
+            continue
+        user_input_list.insert(entryVar.get())
+
 #if given word and written word has not same
 #then change the color of given word with red
 
