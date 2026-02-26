@@ -43,6 +43,7 @@ def checkInputAndString():
 #then change the color of given word with red
 
 def wpmCalculated():
+    # wpm = (all typed entry/5)/time(min)
     # word per minute calculated
     # result = (word/60)
 
