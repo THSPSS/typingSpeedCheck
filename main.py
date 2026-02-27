@@ -42,7 +42,7 @@ def checkInputAndString():
 #if given word and written word has not same
 #then change the color of given word with red
 
-def wpmCalculated():
+# def wpmCalculated():
     # wpm = (all typed entry/5)/time(min)
     # word per minute calculated
     # result = (word/60)
@@ -69,15 +69,15 @@ if __name__ == "__main__":
     wpm.set("0")
 
     secondEntry = Entry(app , width=3 , font=("Arial", 18,""),textvariable=second)
-    secondEntry.grid(row=0 , column=0)
+    secondEntry.grid(row=0 , column=1, columnspan=3)
 
     # wpmEntry
     wpmEntry = Entry(app , width=3 , font=("Arial", 18 , ""))
-    wpmEntry.grid(row=0 , column=1)
+    wpmEntry.grid(row=0 , column=0,columnspan=2)
 
     #text widget
     testText = tk.Text(app, height=5, width=30)
-    testText.grid(row=1 , columnspan=7)
+    testText.grid(row=1 , columnspan=5)
 
     testText.insert(tk.INSERT , testString)
 
