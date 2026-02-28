@@ -35,8 +35,9 @@ def checkInputAndString():
     #when user start to put string then check the word by word with test string
     user_input_list = []
     for string in testString :
-        if entryVar.get() != string:
-            continue
+        for char in string :
+            if entryVar.get() != char:
+                print("wrong char")
         user_input_list.insert(entryVar.get())
 
 #if given word and written word has not same
