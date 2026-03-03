@@ -7,6 +7,7 @@ from tkinter import messagebox
 #user typing two words than it gets a wpm
 # wpm is word per minute(60seconds)
 #check input word and check time(seconds)
+testWords = "apple , applause, more, column ,tree"
 testString = ["apple", "applause","more" ,"column" ,"tree"]
 
 
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     testText = tk.Text(app, height=5, width=30)
     testText.grid(row=1 , columnspan=5)
 
-    testText.insert(tk.INSERT , testString)
+    testText.insert(tk.INSERT , testWords)
 
     # btn = Button(app, text='Set Time Countdown', bd='5',
     #              command=seconds_timer)
