@@ -7,7 +7,7 @@ from tkinter import messagebox
 #user typing two words than it gets a wpm
 # wpm is word per minute(60seconds)
 #check input word and check time(seconds)
-testWords = "apple , applause, more, column ,tree"
+testWords = "apple , applause, more, column ,tree , apple , calender , typing , matter , most"
 testString = ["apple", "applause","more" ,"column" ,"tree"]
 
 
